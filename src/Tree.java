@@ -1,7 +1,6 @@
 import java.util.ConcurrentModificationException;
 
 public class Tree {
-    public static int layer = 0;
     private State startState;
 
     public Tree(State stateStart) {
