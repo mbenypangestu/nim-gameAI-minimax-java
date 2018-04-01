@@ -24,11 +24,7 @@ public class Tree {
 
     public void setState(State state) {
         if (state.isStateHasChild()) this.createChildState(state);
-        else {
-//            System.out.println("Minimax : " + state.getMinimax());
-            this.setStaticEvaluationValue(state);
-//            System.out.println("| End");
-        }
+        else this.setStaticEvaluationValue(state);
     }
 
     public void setStaticEvaluationValue(State state) {
@@ -53,7 +49,6 @@ public class Tree {
                 }
             }
         }
-//        System.out.println(state.getValue());
 
         if (parent != null)
             this.setStaticEvaluationValue(parent);
@@ -64,16 +59,12 @@ public class Tree {
 
         try {
             if (parent.getState().size() > 0) {
-//                System.out.println(" | Parent " + parent + " : Minimax : " + parent.getMinimax());
-
                 for (int item_state : parent.getState()) {
                     maxchild_factor = parent.getMaxChildFactor(item_state);
 
                     for (int i = 1; i <= maxchild_factor; i++) {
                         State child_state =
                                 new State(parent, parent.getRemainingItemState(item_state), item_state - i, i);
-
-//                        System.out.println(" ---> " + child_state + " ");
 
                         if (parent.getMinimax() > 0) this.minimize(child_state);
                         else this.maximize(child_state);
