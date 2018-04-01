@@ -23,22 +23,5 @@ public class Main {
 
         Game game = new Game(startState, choose_move);
         game.start();
-
-//        System.out.println("\n\n\n State : " + startState.getChildList().get(2).getState());
-//        System.out.println("\n Value : " + startState.getChildList().get(2).getValue());
-//        System.out.println("\n Childsize : " + startState.getChildList().get(2).getChildList().size());
-//        System.out.println("\n Child : " + startState.getChildList().get(2).getChildList());
-//        System.out.println("\n Minimax : " + startState.getChildList().get(2).getMinimax());
-
-//        try {
-//            System.out.println("Pilih Opsi : \n1. Main Pertama \n2. Main Kedua");
-//            option = Integer.parseInt(userInput.readLine());
-//
-//            do {
-//
-//            } while (win == 0);
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
     }
 }
