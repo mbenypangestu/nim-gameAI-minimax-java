@@ -100,8 +100,8 @@ public class Game {
 
     public void showWin(String playerWin) {
         if (playerWin.equals("human"))
-            System.out.println("\n----------- Congrats. You win ! -----------");
+            System.out.println("\n------ Congrats. You win! ------");
         else
-            System.out.println("\n----------- Sorry. You lose ! -----------");
+            System.out.println("\n------ Sorry. You lose ! -------");
     }
 }
